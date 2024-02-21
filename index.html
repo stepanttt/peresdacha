@@ -9,7 +9,75 @@
 
   <link rel="stylesheet" href="./normalize.css">
   <link rel="stylesheet" href="./style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* чтобы футер оставался внизу */
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    main {
+      padding: 20px;
+      flex: 1; /* чтобы контент занимал оставшееся пространство */
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      width: 100%;
+      flex-shrink: 0; /* чтобы футер не уменьшался с контентом */
+    }
+
+    @media (max-width: 768px) {
+      footer {
+        font-size: 14px;
+        padding: 5px;
+      }
+    }
+  </style>
 </head>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">Каталог</a></li>
+      <li><a href="#">О нас</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+  </nav>
+</header>
+
+
 <body>
   <h1 class="title">Список товаров</h1>
   <main class="list-card">
@@ -70,5 +138,8 @@
       </div>
     </div>
   </main>
+  <footer>
+    <p>&copy; Это футер</p>
+  </footer>
 </body>
 </html>
