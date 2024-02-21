@@ -1,0 +1,71 @@
+
+$primary-color: #3498db;
+$card-background: #ecf0f1;
+$hover-scale-factor: 1.1;
+
+
+$font-stack: 'Arial', sans-serif;
+$base-font-size: 16px;
+
+body {
+  font-family: $font-stack;
+  font-size: $base-font-size;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  color: $primary-color;
+}
+
+.list-card {
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.cell {
+  background-color: $card-background;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .card {
+    transition: transform 0.3s ease-in-out;
+    
+    .card-preview-inner {
+      max-width: 100%;
+      height: auto;
+    }
+
+    &:hover {
+      transform: scale($hover-scale-factor);
+    }
+
+    .card-title {
+      color: $primary-color;
+      margin: 10px 0;
+    }
+
+    .card-description {
+      color: #333;
+    }
+
+    .card-button-show {
+      background-color: $primary-color;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+}
